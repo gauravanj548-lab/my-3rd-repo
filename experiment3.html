@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>College Timetable - CSE Department</title>
+  <style>
+    body {
+      font-family: "Times New Roman", Georgia, serif;
+      background: #fff;
+      padding: 28px;
+      color: #111;
+    }
+
+    .wrapper {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    h2.output-title {
+      margin: 0 0 12px 0;
+      font-size: 18px;
+      font-weight: 700;
+    }
+
+    .timetable {
+      border-collapse: collapse;
+      width: 100%;
+      margin: 8px 0 18px 0;
+      box-shadow: 0 0 0 1px #000 inset;
+    }
+
+    .timetable caption {
+      caption-side: top;
+      text-align: center;
+      font-weight: 700;
+      padding: 6px 0;
+    }
+
+    .timetable th,
+    .timetable td {
+      border: 1px solid #000;
+      padding: 6px 8px;
+      text-align: center;
+      font-size: 12px;
+      vertical-align: middle;
+    }
+
+    .left-col {
+      width: 12%;
+      font-weight: 700;
+    }
+
+    /* make the nested lab details smaller */
+    .lab-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 11px;
+    }
+    .lab-table td {
+      border: 1px solid #000;
+      padding: 4px;
+    }
+
+    /* small style for notes/outcome */
+    .outcome {
+      margin-top: 14px;
+      font-size: 13px;
+    }
+    .outcome ul {
+      margin: 6px 0 0 18px;
+    }
+
+    /* subtle gray line like the sample */
+    .separator {
+      margin-top: 18px;
+      border-top: 1px solid #ccc;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <div>
+      <strong>Output:</strong>
+    </div>
+
+    <table class="timetable">
+      <caption>College Timetable - CSE Department</caption>
+      <thead>
+        <tr>
+          <th class="left-col">Day / Time</th>
+          <th>9:00 - 10:00</th>
+          <th>10:00 - 11:00</th>
+          <th>11:00 - 12:00</th>
+          <th>12:00 - 1:00</th>
+          <th>1:00 - 2:00</th>
+          <th>2:00 - 3:00</th>
+          <th>3:00 - 4:00</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td><strong>Monday</strong></td>
+          <td>Mathematics</td>
+          <td>English</td>
+          <td></td>
+          <td>Break</td>
+          <td>Computer Lab</td>
+          <td></td>
+          <td>Sports</td>
+        </tr>
+
+        <tr>
+          <td><strong>Tuesday</strong></td>
+          <td></td>
+          <td>C Programming</td>
+          <td>Physics</td>
+          <td>Break</td>
+          <td>Electronics Lab</td>
+          <td></td>
+          <td>Library</td>
+        </tr>
+
+        <tr>
+          <td><strong>Wednesday</strong></td>
+          <td>Mathematics</td>
+          <td>English</td>
+          <td rowspan="2">Physics</td>
+          <td>Break</td>
+          <td>Computer Networks</td>
+          <td>
+            <!-- Insert nested Lab Details box in the right two cells area -->
+            <table class="lab-table">
+              <tr>
+                <td colspan="1" style="text-align:center;font-weight:700;">Lab Details</td>
+                <td style="text-align:center;font-weight:700;">&nbsp;</td>
+              </tr>
+              <tr>
+                <td>Batch A &nbsp; - &nbsp; DBMS Lab</td>
+                <td>Batch B &nbsp; - &nbsp; OS Lab</td>
+              </tr>
+            </table>
+          </td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td><strong>Thursday</strong></td>
+          <td>Workshop</td>
+          <td></td>
+          <!-- physics cell continues from Wednesday rowspan -->
+          <td>Break</td>
+          <td>Mathematics</td>
+          <td>English</td>
+          <td>Seminar</td>
+        </tr>
+
+        <tr>
+          <td><strong>Friday</strong></td>
+          <td>Computer Networks</td>
+          <td>English</td>
+          <td>Physics</td>
+          <td>Break</td>
+          <td colspan="2">Project Work</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="outcome">
+      <strong>Outcome:</strong>
+      <ul>
+        <li>Successfully created a college timetable webpage using HTML tables.</li>
+        <li>Implemented rowspan, colspan, headers, captions, and nested tables.</li>
+        <li>Learned to organize tabular data in a structured webpage format.</li>
+      </ul>
+    </div>
+
+    <div class="separator"></div>
+  </div>
+</body>
+</html>

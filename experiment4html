@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Hotel Room Booking Form (Printable)</title>
+  <style>
+    /* Page / print setup */
+    @page { margin: 20mm; }
+    body {
+      font-family: "Times New Roman", Georgia, serif;
+      background: #fff;
+      color: #111;
+      margin: 0;
+      padding: 20px;
+    }
+
+    /* Outer layout like the screenshot: left "Output:" label + centered form */
+    .page {
+      max-width: 800px;
+      margin: 0 auto;
+      position: relative;
+    }
+
+    .label-output {
+      font-weight: 700;
+      margin: 18px 0 6px 0;
+    }
+
+    /* Paper-like center area */
+    .form-wrap {
+      display: flex;
+      justify-content: center;
+      margin-top: 6px;
+    }
+
+    .booking-card {
+      width: 320px;                /* narrow like your screenshot */
+      border: 2px solid #111;
+      padding: 16px;
+      box-sizing: border-box;
+      text-align: left;
+      background: #fff;
+    }
+
+    .booking-card h2 {
+      margin: 0 0 12px 0;
+      text-align: center;
+      font-size: 18px;
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    .field-row {
+      display: flex;
+      align-items: center;
+      margin: 6px 0;
+      font-size: 13px;
+    }
+
+    .field-row label {
+      width: 110px;
+      font-size: 12px;
+    }
+
+    .field-row input[type="text"],
+    .field-row input[type="email"],
+    .field-row input[type="tel"],
+    .field-row input[type="number"],
+    .field-row input[type="date"],
+    .field-row select {
+      flex: 1;
+      padding: 4px 6px;
+      font-size: 13px;
+      border: 1px solid #999;
+      height: 26px;
+      box-sizing: border-box;
+    }
+
+    .small-input {
+      width: 60px;
+    }
+
+    .textarea-row label { display:block; margin-bottom:6px; font-size:12px; }
+    .special-requests {
+      width: 100%;
+      min-height: 48px;
+      resize: vertical;
+      padding: 6px;
+      border: 1px solid #999;
+      font-size: 13px;
+      box-sizing: border-box;
+    }
+
+    .buttons {
+      display:flex;
+      gap:8px;
+      justify-content:center;
+      margin-top: 10px;
+    }
+
+    .btn {
+      padding:6px 10px;
+      border:1px solid #666;
+      background:#eee;
+      cursor: pointer;
+      font-size:12px;
+    }
+
+    /* Outcome section below like screenshot */
+    .outcome {
+      margin-top: 22px;
+      font-size: 13px;
+    }
+    .outcome ul { margin:6px 0 0 18px; }
+
+    /* Make print look similar: remove background, ensure everything fits */
+    @media print {
+      body { margin: 0; padding: 0; }
+      .page { margin: 0; }
+      .booking-card { box-shadow: none; }
+      .btn { -webkit-print-color-adjust: exact; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <div class="label-output">Output:</div>
+
+    <div class="form-wrap">
+      <div class="booking-card" role="region" aria-label="Hotel Room Booking Form">
+        <h2>Hotel Room Booking Form</h2>
+
+        <form>
+          <div class="field-row">
+            <label for="fullname">Full Name:</label>
+            <input id="fullname" name="fullname" type="text" placeholder="">
+          </div>
+
+          <div class="field-row">
+            <label for="email">Email:</label>
+            <input id="email" name="email" type="email" placeholder="">
+          </div>
+
+          <div class="field-row">
+            <label for="phone">Phone:</label>
+            <input id="phone" name="phone" type="tel" placeholder="">
+          </div>
+
+          <div class="field-row">
+            <label for="checkin">Check-in Date:</label>
+            <input id="checkin" name="checkin" type="date">
+          </div>
+
+          <div class="field-row">
+            <label for="checkout">Check-out Date:</label>
+            <input id="checkout" name="checkout" type="date">
+          </div>
+
+          <div class="field-row">
+            <label for="roomtype">Room Type:</label>
+            <select id="roomtype" name="roomtype">
+              <option>Single Room</option>
+              <option>Double Room</option>
+              <option>Suite</option>
+            </select>
+          </div>
+
+          <div class="field-row">
+            <label for="guests">Number of Guests:</label>
+            <input id="guests" name="guests" type="number" min="1" class="small-input" placeholder="1">
+          </div>
+
+          <div class="textarea-row" style="margin-top:8px;">
+            <label for="requests">Special Requests:</label>
+            <textarea id="requests" name="requests" class="special-requests" placeholder=""></textarea>
+          </div>
+
+          <div class="buttons">
+            <button type="submit" class="btn">Book Now</button>
+            <button type="reset" class="btn">Reset Form</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Outcome bullets similar to screenshot -->
+    <div class="outcome">
+      <strong>Outcome</strong>
+      <ul>
+        <li>Successfully created a hotel room booking form webpage using HTML.</li>
+        <li>Implemented input fields, labels, select, textarea, and buttons.</li>
+        <li>Learned practical form design techniques for web applications.</li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 50px;
+            background-color: #fff;
+        }
+        h2 {
+            text-align: center;
+            text-decoration: underline;
+        }
+        form {
+            width: 400px;
+            margin: auto;
+            border: 1px solid #ccc;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px #ccc;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="number"],
+        textarea {
+            width: 95%;
+            padding: 5px;
+            margin-top: 5px;
+        }
+        input[type="radio"] {
+            margin-right: 5px;
+        }
+        .buttons {
+            text-align: center;
+            margin-top: 20px;
+        }
+        input[type="submit"],
+        input[type="reset"] {
+            padding: 8px 20px;
+            margin: 5px;
+            cursor: pointer;
+            border: none;
+            background-color: #4CAF50;
+            color: white;
+            border-radius: 5px;
+        }
+        input[type="reset"] {
+            background-color: #f44336;
+        }
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Student Registration Form</h2>
+    <form>
+        <label>Full Name:</label>
+        <input type="text" placeholder="Enter your full name" required>
+
+        <label>Email:</label>
+        <input type="email" placeholder="Enter your email" required>
+
+        <label>Password:</label>
+        <input type="password" placeholder="Enter your password" required>
+
+        <label>Gender:</label>
+        <input type="radio" name="gender" value="Male">Male
+        <input type="radio" name="gender" value="Female">Female
+        <input type="radio" name="gender" value="Other">Other
+
+        <label>Contact No.:</label>
+        <input type="number" placeholder="Enter contact number" required>
+
+        <label>Address:</label>
+        <textarea rows="3" placeholder="Enter your address"></textarea>
+
+        <div class="buttons">
+            <input type="submit" value="Register">
+            <input type="reset" value="Clear">
+        </div>
+    </form>
+
+    <footer>
+        ©️ 2025 Student Registration Portal
+    </footer>
+</body>
+</html>
